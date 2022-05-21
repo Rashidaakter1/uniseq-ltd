@@ -1,50 +1,63 @@
 import React from 'react';
-import { useSignInWithEmailAndPassword, useSignInWithGoogle } from 'react-firebase-hooks/auth';
+import { useCreateUserWithEmailAndPassword, useSignInWithEmailAndPassword, useSignInWithGoogle } from 'react-firebase-hooks/auth';
 import { useForm } from "react-hook-form";
 import { Link, useNavigate } from 'react-router-dom';
 import auth from '../../../firebase.init';
 import Loading from '../../Shared/Loading/Loading';
 
-
-const Login = () => {
-    const navigate=useNavigate()
+const Register = () => {
+    const navigate = useNavigate()
 
     const [
-        signInWithEmailAndPassword,
+        createUserWithEmailAndPassword,
         user,
         loading,
         error,
-    ] = useSignInWithEmailAndPassword(auth);
+    ] = useCreateUserWithEmailAndPassword(auth);
     const [signInWithGoogle, gUser, gLoading, gError] = useSignInWithGoogle(auth);
-
 
     const { register, formState: { errors }, handleSubmit } = useForm();
     const onSubmit = data => {
-        signInWithEmailAndPassword(data.email, data.password)
+        createUserWithEmailAndPassword(data.email, data.password)
         console.log(data)
     };
+
     let errorMessage;
     if (error || gError) {
         errorMessage =
-          <div>
-            <p>Error: {error.message}</p>
-          </div>
-       
-      }
-      if (loading || gLoading) {
+            <div>
+                <p>Error: {error.message}</p>
+            </div>
+
+    }
+    if (loading || gLoading) {
         return <Loading></Loading>
-      }
-      if (user || gUser ) {
+    }
+    if (user || gUser) {
         navigate('/home')
-      }
-
-
+    }
     return (
         <div className='h-screen' data-theme='cupcake'>
-            <h2 className="text-2xl text-primary">LogIn</h2>
+            <h2 className="text-2xl text-primary">Register</h2>
             <div>
                 <div class="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-secondary">
                     <form class="card-body" onSubmit={handleSubmit(onSubmit)}>
+                        <div class="form-control">
+                            <label class="label">
+                                <span class="label-text">Name</span>
+                            </label>
+                            <input type="text" placeholder="Name" class="input input-bordered"
+                                {...register("name", {
+                                    required: true
+
+                                })}
+                            />
+                            <p className='text-red-500'>
+                                {errors.name?.type === 'required' && "name is required"}
+
+
+                            </p>
+                        </div>
                         <div class="form-control">
                             <label class="label">
                                 <span class="label-text">Email</span>
@@ -88,7 +101,7 @@ const Login = () => {
                             </label>
                         </div>
                         <div class="form-control mt-6">
-                            <input type="submit" class="btn btn-primary" value='Login' />
+                            <input type="submit" class="btn btn-primary" value='Register' />
                             <button onClick={() => signInWithGoogle()} className='btn btn-primary mt-4' >
                                 <div className='flex flex-row items-center'>
 
@@ -97,12 +110,10 @@ const Login = () => {
                                     <div><span className=''>Continue With Google</span></div>
                                 </div>
                             </button>
-
                             <p className='text-red-500 text-xs'>{errorMessage}</p>
-
                         </div>
                         <div>
-                            <p>New to Compo? <Link to='/register' >Register </Link></p>
+                            <p>Already have an account? <Link to='/login' >Login </Link></p>
                         </div>
                     </form>
 
@@ -114,4 +125,4 @@ const Login = () => {
     );
 };
 
-export default Login;
+export default Register;
