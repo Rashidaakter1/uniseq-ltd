@@ -1,14 +1,19 @@
-import logo from './logo.svg';
+
 import './App.css';
+import { Routes, Route, Link } from "react-router-dom";
+import Home from './Pages/Home/Home/Home';
+import Purchase from './Pages/Home/Purchase/Purchase';
+import Login from './Pages/Home/Login/Login';
+
 
 function App() {
   return (
-    <div className="App">
-      <h1 class="text-6xl font-bold underline">
-        Hello world!
-      </h1>
-      <button class="inline-block cursor-pointer rounded-md bg-gray-800 px-4 py-3 text-center text-sm font-semibold uppercase text-white transition duration-200 ease-in-out hover:bg-gray-900">Button</button>
-      <button class="btn btn-primary">Button</button>
+    <div >
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/purchase" element={<Purchase></Purchase>} />
+        <Route path="/login" element={<Login></Login>} />
+      </Routes>
 
     </div>
   );

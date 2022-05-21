@@ -1,0 +1,64 @@
+[
+    {
+        "_id":1,
+        "name":"Mouse",
+        "img" : "https://upload.wikimedia.org/wikipedia/commons/2/22/3-Tasten-Maus_Microsoft.jpg",
+        "description":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa blanditiis commodi in. Soluta, ipsam? Quam?",
+        "minimumOrder" : 100,
+        "available":1000,
+        "price":1000
+
+
+    },
+    {
+        "_id":1,
+        "name":"Mouse",
+        "img" : "https://upload.wikimedia.org/wikipedia/commons/2/22/3-Tasten-Maus_Microsoft.jpg",
+        "description":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa blanditiis commodi in. Soluta, ipsam? Quam?",
+        "minimumOrder" : 100,
+        "available":1000,
+        "price":1000
+
+    },
+    {
+        "_id":1,
+        "name":"Mouse",
+        "img" : "https://upload.wikimedia.org/wikipedia/commons/2/22/3-Tasten-Maus_Microsoft.jpg",
+        "description":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa blanditiis commodi in. Soluta, ipsam? Quam?",
+        "minimumOrder" : 100,
+        "available":1000,
+        "price":1000
+
+    },
+    {
+        "_id":1,
+        "name":"Mouse",
+        "img" : "https://upload.wikimedia.org/wikipedia/commons/2/22/3-Tasten-Maus_Microsoft.jpg",
+        "description":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa blanditiis commodi in. Soluta, ipsam? Quam?",
+        "minimumOrder" : 100,
+        "available":1000,
+        "price":1000
+
+    },
+    {
+        "_id":1,
+        "name":"Mouse",
+        "img" : "https://upload.wikimedia.org/wikipedia/commons/2/22/3-Tasten-Maus_Microsoft.jpg",
+        "description":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa blanditiis commodi in. Soluta, ipsam? Quam?",
+        "minimumOrder" : 100,
+        "available":1000,
+        "price":1000
+
+    },
+    {
+        "_id":1,
+        "name":"Mouse",
+        "img" : "https://upload.wikimedia.org/wikipedia/commons/2/22/3-Tasten-Maus_Microsoft.jpg",
+        "description":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa blanditiis commodi in. Soluta, ipsam? Quam?",
+        "minimumOrder" : 100,
+        "available":1000,
+        "price":1000
+
+    }
+    
+]
