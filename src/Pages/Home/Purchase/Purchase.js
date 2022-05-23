@@ -3,6 +3,7 @@ import { useAuthState } from 'react-firebase-hooks/auth';
 import { useForm } from 'react-hook-form';
 import { useQuery } from 'react-query';
 import { useParams } from 'react-router-dom';
+import { toast } from 'react-toastify';
 import auth from '../../../firebase.init';
 import Loading from '../../Shared/Loading/Loading';
 
@@ -40,8 +41,10 @@ const Purchase = () => {
         })
             .then(response => response.json())
             .then(data => {
+                toast.success('your order is placed')
                 console.log('Success:', data);
             })
+
         console.log(data,orderData)
     };
 

@@ -8,7 +8,7 @@ import MyOrder from './MyOrder';
 const MyOrders = () => {
     const [user, loading] = useAuthState(auth);
 
-    const { isLoading, error, data: orders } = useQuery('orders', () =>
+    const { isLoading, error, data: orders ,refetch} = useQuery('orders', () =>
         fetch(`http://localhost:5000/orders/?email=${user?.email}`).then(res =>
             res.json()
         )
@@ -35,6 +35,7 @@ const MyOrders = () => {
                             <th>Email</th>
                             <th>Materials</th>
                             <th></th>
+                            <th></th>
                         </tr>
                     </thead>
                     {
@@ -42,6 +43,7 @@ const MyOrders = () => {
                         key={order._id}
                         order={order}
                         index={index}
+                        refetch={refetch}
                         ></MyOrder>)
                     }
                     

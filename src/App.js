@@ -16,6 +16,8 @@ import MyPortfolio from './Pages/Home/MyPortfolio/MyPortfolio';
 import Navbar from './Pages/Shared/Navbar/Navbar';
 import Footer from './Pages/Shared/Footer/Footer';
 import Reviews from './Pages/Home/Reviews/Reviews';
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 
 function App() {
@@ -41,7 +43,9 @@ function App() {
 
         <Route path="*" element={<NotFound></NotFound>} />
       </Routes>
+
     <Footer></Footer>
+    <ToastContainer></ToastContainer>
     </div>
   );
 }
