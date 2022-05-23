@@ -15,6 +15,7 @@ import Blogs from './Pages/Home/Blogs/Blogs';
 import MyPortfolio from './Pages/Home/MyPortfolio/MyPortfolio';
 import Navbar from './Pages/Shared/Navbar/Navbar';
 import Footer from './Pages/Shared/Footer/Footer';
+import Reviews from './Pages/Home/Reviews/Reviews';
 
 
 function App() {
@@ -30,6 +31,7 @@ function App() {
         <Route path="/register" element={<Register></Register>} />
         <Route path="/blogs" element={<Blogs></Blogs>} />
         <Route path="/portfolio" element={<MyPortfolio></MyPortfolio>} />
+        <Route path="/reviews" element={<Reviews></Reviews>} />
         <Route path="dashboard" element={<Dashboard></Dashboard>}>
           <Route index element={<MyOrders></MyOrders>} />
           <Route path='myprofile' element={<MyProfile></MyProfile>} />

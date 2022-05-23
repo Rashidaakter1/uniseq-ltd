@@ -7,7 +7,7 @@ const Dashboard = () => {
             <h1>welcome to dashboard</h1>
             <div class="drawer drawer-mobile">
                 <input id="dashboardBar" type="checkbox" class="drawer-toggle" />
-                <div class="drawer-content flex flex-col items-center justify-center">
+                <div class="drawer-content flex flex-col ">
                     {/* <!-- Page content here --> */}
                     dashboard
                     <Outlet></Outlet>
@@ -15,7 +15,7 @@ const Dashboard = () => {
                 </div>
                 <div class="drawer-side">
                     <label for="dashboardBar" class="drawer-overlay"></label>
-                    <ul class="menu p-4 overflow-y-auto w-80 bg-base-100 text-base-content">
+                    <ul class="menu p-4 overflow-y-auto w-50 bg-base-100 text-base-content">
                         {/* <!-- Sidebar content here --> */}
                        
                         <li><Link to='/dashboard'>My Orders</Link></li>

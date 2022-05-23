@@ -1,5 +1,5 @@
 import React from 'react';
-import { useCreateUserWithEmailAndPassword, useSignInWithEmailAndPassword, useSignInWithGoogle } from 'react-firebase-hooks/auth';
+import { useCreateUserWithEmailAndPassword,  useSignInWithGoogle, useUpdateProfile } from 'react-firebase-hooks/auth';
 import { useForm } from "react-hook-form";
 import { Link, useNavigate } from 'react-router-dom';
 import auth from '../../../firebase.init';
@@ -16,12 +16,17 @@ const Register = () => {
     ] = useCreateUserWithEmailAndPassword(auth);
     const [signInWithGoogle, gUser, gLoading, gError] = useSignInWithGoogle(auth);
 
+    const [updateProfile, updating, updatingError] = useUpdateProfile(auth);
+
     const { register, formState: { errors }, handleSubmit } = useForm();
-    const onSubmit = data => {
-        createUserWithEmailAndPassword(data.email, data.password)
+    const onSubmit = async (data) => {
+      await  createUserWithEmailAndPassword(data.email, data.password)
+
+      await updateProfile({ displayName: data.name });
+          alert('Updated profile');
 
         const userData = {
-            name: data?.displayName,
+            name: data?.name,
             email: data?.email,
             
         }
@@ -50,7 +55,7 @@ const Register = () => {
             </div>
 
     }
-    if (loading || gLoading) {
+    if (loading || gLoading || updating) {
         return <Loading></Loading>
     }
     if (user || gUser) {

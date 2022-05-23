@@ -23,6 +23,7 @@ const Purchase = () => {
     )
     const onSubmit = data => {
         const orderData = {
+            productName :part?.name,
             name: user?.displayName,
             email: user?.email,
             address: data.address,
