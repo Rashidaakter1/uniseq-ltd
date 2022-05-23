@@ -1,13 +1,15 @@
 import React from 'react';
 import { useSignInWithEmailAndPassword, useSignInWithGoogle } from 'react-firebase-hooks/auth';
 import { useForm } from "react-hook-form";
-import { Link, useNavigate } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import auth from '../../../firebase.init';
 import Loading from '../../Shared/Loading/Loading';
 
 
 const Login = () => {
     const navigate=useNavigate()
+    let location = useLocation();
+    let from = location.state?.from?.pathname || "/";
 
     const [
         signInWithEmailAndPassword,
@@ -35,7 +37,7 @@ const Login = () => {
         return <Loading></Loading>
       }
       if (user || gUser ) {
-        navigate('/home')
+        navigate(from, { replace: true });
       }
 
 

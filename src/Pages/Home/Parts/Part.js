@@ -3,6 +3,8 @@ import { Link } from 'react-router-dom';
 
 const Part = ({ part }) => {
     const { _id, name, description, img, available, minimumOrder,price } = part
+
+
     return (
         <div className='grid  lg: grid-cols-3 '>
             <div class="card w-96 bg-base-100 shadow-xl image-full">
@@ -15,7 +17,7 @@ const Part = ({ part }) => {
                     <p>Price : {price}</p>
 
                     <div class="card-actions justify-end">
-                        <Link to='/purchase' class="btn btn-primary">Buy Now</Link >
+                        <Link to={`/purchase/${_id}`} class="btn btn-primary">Buy Now</Link >
                     </div>
                 </div>
             </div>

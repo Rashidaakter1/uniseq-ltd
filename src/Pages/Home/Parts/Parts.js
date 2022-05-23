@@ -4,8 +4,8 @@ import Loading from '../../Shared/Loading/Loading';
 import Part from './Part';
 
 const Parts = () => {
-    const { isLoading, error, data: parts } = useQuery('repoData', () =>
-        fetch('computerParts.json').then(res =>
+    const { isLoading, error, data: parts } = useQuery('parts', () =>
+        fetch('http://localhost:5000/parts').then(res =>
             res.json()
         )
     )

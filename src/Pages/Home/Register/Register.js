@@ -19,7 +19,27 @@ const Register = () => {
     const { register, formState: { errors }, handleSubmit } = useForm();
     const onSubmit = data => {
         createUserWithEmailAndPassword(data.email, data.password)
-        console.log(data)
+
+        const userData = {
+            name: data?.displayName,
+            email: data?.email,
+            
+        }
+
+        fetch('http://localhost:5000/users', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(userData),
+        })
+            .then(response => response.json())
+            .then(data => {
+                console.log('Success:', data);
+            })
+    
+            console.log(userData)
+        
     };
 
     let errorMessage;
