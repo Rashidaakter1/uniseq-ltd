@@ -8,6 +8,7 @@ const Navbar = () => {
     const [user, loading, error] = useAuthState(auth);
     const logout = () => {
         signOut(auth);
+        localStorage.removeItem('accessToken')
     };
     return (
         <div class="navbar bg-base-100 sticky-top">
@@ -42,7 +43,7 @@ const Navbar = () => {
 
                     <li><NavLink to='/blogs'>Blogs</NavLink></li>
                     <li><NavLink to='/portfolio'>Portfolio</NavLink></li>
-                    <li><NavLink to='/reviews'>Reviews</NavLink></li>
+                    {/* <li><NavLink to='/reviews'>Reviews</NavLink></li> */}
 
                 </ul>
             </div>

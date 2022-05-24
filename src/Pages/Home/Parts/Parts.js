@@ -14,8 +14,8 @@ const Parts = () => {
         return <Loading></Loading>
     }
     return (
-        <div className='p-24'>
-            <h1>Parts : {parts.length}</h1>
+        <div className='p-20'>
+            <h1 className='text-5xl font-bold text-center mt-24 mb-16'>Materials That We Provide </h1>
 
             <div className='grid lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1  gap-6'>
                 {

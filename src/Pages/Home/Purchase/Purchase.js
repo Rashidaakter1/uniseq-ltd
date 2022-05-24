@@ -2,14 +2,14 @@ import React, { useState } from 'react';
 import { useAuthState } from 'react-firebase-hooks/auth';
 import { useForm } from 'react-hook-form';
 import { useQuery } from 'react-query';
-import { useParams } from 'react-router-dom';
+import { useNavigate, useParams } from 'react-router-dom';
 import { toast } from 'react-toastify';
 import auth from '../../../firebase.init';
 import Loading from '../../Shared/Loading/Loading';
 
 const Purchase = () => {
 
-
+    const navigate = useNavigate()
 
     const [user, loading] = useAuthState(auth);
     const { id } = useParams()
@@ -43,6 +43,7 @@ const Purchase = () => {
             .then(data => {
                 toast.success('your order is placed')
                 console.log('Success:', data);
+                navigate('/dashboard')
             })
 
         console.log(data,orderData)
@@ -57,7 +58,7 @@ const Purchase = () => {
     const min = part?.minimumOrder;
     const max = part?.available;
 
-    const [value, setValue] = useState('0');
+    const [value, setValue] = useState(min);
 
     const handleChange = event => {
         const value = Math.max(min, Math.min(max, Number(event.target.value)));

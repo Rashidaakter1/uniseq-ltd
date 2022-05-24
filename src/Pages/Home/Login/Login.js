@@ -3,11 +3,13 @@ import { useSignInWithEmailAndPassword, useSignInWithGoogle } from 'react-fireba
 import { useForm } from "react-hook-form";
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import auth from '../../../firebase.init';
+import useToken from '../../../hooks/useToken';
 import Loading from '../../Shared/Loading/Loading';
 
 
 const Login = () => {
     const navigate=useNavigate()
+    
     let location = useLocation();
     let from = location.state?.from?.pathname || "/";
 
@@ -18,9 +20,11 @@ const Login = () => {
         error,
     ] = useSignInWithEmailAndPassword(auth);
     const [signInWithGoogle, gUser, gLoading, gError] = useSignInWithGoogle(auth);
+    const [token]=useToken(user || gUser )
 
 
     const { register, formState: { errors }, handleSubmit } = useForm();
+   
     const onSubmit = data => {
         signInWithEmailAndPassword(data.email, data.password)
         console.log(data)
@@ -36,16 +40,16 @@ const Login = () => {
       if (loading || gLoading) {
         return <Loading></Loading>
       }
-      if (user || gUser ) {
+      if (token) {
         navigate(from, { replace: true });
       }
 
 
     return (
-        <div className='h-screen' data-theme='cupcake'>
-            <h2 className="text-2xl text-primary">LogIn</h2>
-            <div>
-                <div class="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-secondary">
+        <div className='h-screen sm:h-full' data-theme='fantasy'>
+            <h2 className="text-4xl text-primary font-bold text-center p-6 mb-10">LogIn</h2>
+            <div className='flex justify-center items-center'>
+                <div class="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-purple-100">
                     <form class="card-body" onSubmit={handleSubmit(onSubmit)}>
                         <div class="form-control">
                             <label class="label">

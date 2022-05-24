@@ -1,33 +1,25 @@
 import React from 'react';
-import { useAuthState } from 'react-firebase-hooks/auth';
 import { useQuery } from 'react-query';
-import auth from '../../../firebase.init';
 import Loading from '../../Shared/Loading/Loading';
-import MyOrder from './MyOrder';
+import MakeAdmin from '../MakeAdmin/MakeAdmin';
 
-const MyOrders = () => {
-    const [user, loading] = useAuthState(auth);
+const ManageUsers = () => {
 
-    const { isLoading, error, data: orders, refetch } = useQuery('orders', () =>
-        fetch(`http://localhost:5000/orders/?email=${user?.email}`, {
-            method: 'GET',
-            headers: {
-                'authorization': `Bearer ${localStorage.getItem('accessToken')}`
-            }
-        }).then(res => res.json() )
+
+    const { isLoading, error, data: users, refetch } = useQuery('users', () =>
+        fetch(`http://localhost:5000/users`).then(res =>
+            res.json()
+        )
 
 
     )
     if (isLoading) {
         return <Loading></Loading>
     }
-    console.log(orders);
-
-
-
+    console.log(users);
     return (
         <div>
-
+            <h1 className=''>ManageUsers : {users.length}</h1>
             <div class="overflow-x-auto">
                 <table class="table table-zebra w-full">
 
@@ -36,25 +28,25 @@ const MyOrders = () => {
                             <th></th>
                             <th>Name</th>
                             <th>Email</th>
-                            <th>Materials</th>
                             <th></th>
                             <th></th>
                         </tr>
                     </thead>
                     {
-                        orders.map((order, index) => <MyOrder
-                            key={order._id}
-                            order={order}
+                        users.map((user, index) => <MakeAdmin
+                            key={user._id}
+                            user={user}
                             index={index}
                             refetch={refetch}
-                        ></MyOrder>)
+                        ></MakeAdmin>)
                     }
 
 
                 </table>
+                
             </div>
         </div>
     );
 };
 
-export default MyOrders;
+export default ManageUsers;

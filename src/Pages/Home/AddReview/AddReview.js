@@ -2,12 +2,15 @@ import React from 'react';
 import { useAuthState } from 'react-firebase-hooks/auth';
 
 import { useForm } from "react-hook-form";
+import { useNavigate } from 'react-router-dom';
+import { toast } from 'react-toastify';
 import auth from '../../../firebase.init';
 
 
 const AddReview = () => {
     const [user, loading, error] = useAuthState(auth);
     const { register, handleSubmit } = useForm();
+    const navigate=useNavigate()
 
     const onSubmit = data => {
         console.log(data)
@@ -30,6 +33,8 @@ const AddReview = () => {
             .then(response => response.json())
             .then(data => {
                 console.log('Success:', data);
+                toast.success('Thanks for your opinion')
+                navigate('/')
             })
     
     
@@ -37,15 +42,15 @@ const AddReview = () => {
 
     
     return (
-        <div>
+        <div className='text-center'>
             <form onSubmit={handleSubmit(onSubmit)} class=" w-full max-w-xs">
                 <label class="label">
-                    <span class="label-text">Give Your Reviews here</span>
+                    <span class="label-text font-bold text-2xl">Give Your Reviews here</span>
                 </label>
                 
-                <textarea  {...register("description")} class="input input-bordered w-full max-w-xs" cols="30" rows="10"></textarea>
+                <textarea  {...register("description")} class="input input-bordered w-full max-w-xs mb-3" cols="30" rows="10"></textarea>
 
-                <select {...register("ratings")} class="select select-bordered select-sm w-full max-w-xs">
+                <select {...register("ratings")} class="select select-bordered select-sm w-full max-w-xs mb-3">
                     <option disabled selected>Give your ratings</option>
                     <option value="1">1</option>
                     <option value="2">2</option>
@@ -54,7 +59,7 @@ const AddReview = () => {
                     <option value="5">5</option>
                 </select>
 
-                <input type="submit" className='btn btn-secondary' />
+                <input type="submit" className='btn btn-primary mb-3 ' />
             </form>
         </div>
     );

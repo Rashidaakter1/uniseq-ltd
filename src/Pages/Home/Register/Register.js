@@ -20,7 +20,7 @@ const Register = () => {
 
     const [updateProfile, updating, updatingError] = useUpdateProfile(auth);
 
-    const [token]=useToken(user||gUser);
+  
 
     const { register, formState: { errors }, handleSubmit } = useForm();
     const onSubmit = async (data) => {
@@ -28,30 +28,12 @@ const Register = () => {
 
       await updateProfile({ displayName: data.name });
           alert('Updated profile');
-
-         
-
-        // const userData = {
-        //     name: data?.name,
-        //     email: data?.email,
-            
-        // }
-
-        // fetch('http://localhost:5000/users', {
-        //     method: 'POST',
-        //     headers: {
-        //         'Content-Type': 'application/json',
-        //     },
-        //     body: JSON.stringify(userData),
-        // })
-        //     .then(response => response.json())
-        //     .then(data => {
-        //         console.log('Success:', data);
-        //     })
-    
-        //     console.log(userData)
         
     };
+    const [token]=useToken(user||gUser);
+    if (token) {
+        navigate('/home')
+    }
 
     let errorMessage;
     if (error || gError) {
@@ -64,14 +46,12 @@ const Register = () => {
     if (loading || gLoading || updating) {
         return <Loading></Loading>
     }
-    if (token) {
-        navigate('/home')
-    }
+    
     return (
-        <div className='h-screen' data-theme='cupcake'>
-            <h2 className="text-2xl text-primary">Register</h2>
-            <div>
-                <div class="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-secondary">
+        <div className='h-screen sm:h-full' data-theme='fantasy'>
+            <h2 className="text-4xl text-primary font-bold text-center p-6 mb-4">Register</h2>
+            <div className='flex justify-center items-center  '>
+                <div class="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-purple-100">
                     <form class="card-body" onSubmit={handleSubmit(onSubmit)}>
                         <div class="form-control">
                             <label class="label">

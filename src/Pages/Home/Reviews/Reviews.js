@@ -1,6 +1,7 @@
 import React from 'react';
 import { useQuery } from 'react-query';
 import Loading from '../../Shared/Loading/Loading';
+import Review from './Review';
 
 const Reviews = () => {
     const { isLoading, error, data: reviews } = useQuery('reviews', () =>
@@ -15,15 +16,13 @@ const Reviews = () => {
     }
     return (
         <div>
-            <h1>Reviews : {reviews.length}</h1>
-            {
-                reviews.map(review=><div>
-                    <h1>{review.name}</h1>
-                    <h1>{review.email}</h1>
-                    <h1>{review.description}</h1>
-                    <h1>{review.ratings}</h1>
-                </div>)
-            }
+            <h1 className='text-5xl font-bold text-center mt-24 mb-8'>What Our Customers Say !!!</h1>
+            <div className='grid lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 gap-4'>{
+                reviews.map(review=><Review 
+                key={review._id}
+                review={review}
+                ></Review>)
+            }</div>
         </div>
     );
 };
