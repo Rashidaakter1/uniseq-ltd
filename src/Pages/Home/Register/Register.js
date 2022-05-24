@@ -3,10 +3,12 @@ import { useCreateUserWithEmailAndPassword,  useSignInWithGoogle, useUpdateProfi
 import { useForm } from "react-hook-form";
 import { Link, useNavigate } from 'react-router-dom';
 import auth from '../../../firebase.init';
+import useToken from '../../../hooks/useToken';
 import Loading from '../../Shared/Loading/Loading';
 
 const Register = () => {
     const navigate = useNavigate()
+   
 
     const [
         createUserWithEmailAndPassword,
@@ -18,6 +20,8 @@ const Register = () => {
 
     const [updateProfile, updating, updatingError] = useUpdateProfile(auth);
 
+    const [token]=useToken(user||gUser);
+
     const { register, formState: { errors }, handleSubmit } = useForm();
     const onSubmit = async (data) => {
       await  createUserWithEmailAndPassword(data.email, data.password)
@@ -25,25 +29,27 @@ const Register = () => {
       await updateProfile({ displayName: data.name });
           alert('Updated profile');
 
-        const userData = {
-            name: data?.name,
-            email: data?.email,
-            
-        }
+         
 
-        fetch('http://localhost:5000/users', {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json',
-            },
-            body: JSON.stringify(userData),
-        })
-            .then(response => response.json())
-            .then(data => {
-                console.log('Success:', data);
-            })
+        // const userData = {
+        //     name: data?.name,
+        //     email: data?.email,
+            
+        // }
+
+        // fetch('http://localhost:5000/users', {
+        //     method: 'POST',
+        //     headers: {
+        //         'Content-Type': 'application/json',
+        //     },
+        //     body: JSON.stringify(userData),
+        // })
+        //     .then(response => response.json())
+        //     .then(data => {
+        //         console.log('Success:', data);
+        //     })
     
-            console.log(userData)
+        //     console.log(userData)
         
     };
 
@@ -58,7 +64,7 @@ const Register = () => {
     if (loading || gLoading || updating) {
         return <Loading></Loading>
     }
-    if (user || gUser) {
+    if (token) {
         navigate('/home')
     }
     return (
