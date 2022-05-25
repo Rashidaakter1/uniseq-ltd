@@ -20,8 +20,8 @@ const ManageUsers = () => {
     return (
         <div>
             <h1 className=''>ManageUsers : {users.length}</h1>
-            <div class="overflow-x-auto">
-                <table class="table table-zebra w-full">
+            <div className="overflow-x-auto">
+                <table className="table table-zebra w-full">
 
                     <thead>
                         <tr>

@@ -30,8 +30,8 @@ const MyOrder = ({ order ,index , refetch}) => {
                 <td>{name}</td>
                 <td>{email}</td>
                 <td>{productName}</td>
-                <td><button class="btn btn-ghost" onClick={()=>handleDelete(_id)} >delete</button></td>
-                <td><button class="btn btn-ghost" onClick={()=>handlePayment(_id)} >pay</button></td>
+                <td><button className="btn btn-ghost" onClick={()=>handleDelete(_id)} >delete</button></td>
+                <td><button className="btn btn-ghost" onClick={()=>handlePayment(_id)} >pay</button></td>
             </tr>
 
         </tbody>

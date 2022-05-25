@@ -79,10 +79,10 @@ const Purchase = () => {
         <div>
             <h1>purchase {id}</h1>
             <h1>purchase </h1>
-            <div class="card w-3/4 lg:card-side bg-base-100 shadow-xl">
+            <div className="card w-3/4 lg:card-side bg-base-100 shadow-xl">
                 <figure><img src={part.img} alt="" /></figure>
-                <div class="card-body">
-                    <h2 class="card-title">{part.name}</h2>
+                <div className="card-body">
+                    <h2 className="card-title">{part.name}</h2>
                     <p>{part.description}</p>
                     <p>{part.minimumOrder}</p>
                     <p>{part.available}</p>
@@ -90,21 +90,21 @@ const Purchase = () => {
 
 
                     <form onSubmit={handleSubmit(onSubmit)}>
-                        <input  class="input input-bordered w-full max-w-xs" type='text' value={user?.displayName} disabled />
-                        <input  class="input input-bordered w-full max-w-xs" type='email' value={user?.email} disabled />
-                        <input {...register("address")} type="text" placeholder="Type Your Address " class="input input-bordered w-full max-w-xs" />
+                        <input  className="input input-bordered w-full max-w-xs" type='text' value={user?.displayName} disabled />
+                        <input  className="input input-bordered w-full max-w-xs" type='email' value={user?.email} disabled />
+                        <input {...register("address")} type="text" placeholder="Type Your Address " className="input input-bordered w-full max-w-xs" />
 
-                        <input {...register("phone")} type="text" placeholder="Type contact number " class="input input-bordered w-full max-w-xs" />
+                        <input {...register("phone")} type="text" placeholder="Type contact number " className="input input-bordered w-full max-w-xs" />
                         <input {...register("quantity")}
 
-                            type="number" placeholder="Type Quantity number " value={value} onChange={handleChange} class="input input-bordered w-full max-w-xs" />
+                            type="number" placeholder="Type Quantity number " value={value} onChange={handleChange} className="input input-bordered w-full max-w-xs" />
                         {
                             (value >= min && value <= max) ? <p>yes </p> : <p> no</p>
                         }
 
-                        <div class="card-actions justify-end">
+                        <div className="card-actions justify-end">
                             <input
-                                type="submit" class="btn btn-primary" value='Order' />
+                                type="submit" className="btn btn-primary" value='Order' />
                         </div>
 
                     </form>

@@ -4,32 +4,55 @@ import { toast } from 'react-toastify';
 
 const AddProduct = () => {
     const { register, handleSubmit } = useForm();
+    const imageKey = '74e5c723ad8c8f24be7ea70a54d7e813';
     const onSubmit = data => {
-        
-        const partsData = {
-            
-            name: data?.name,
-            img: data?.img,
-            decription : data.decription ,
-            phone: data.phone,
-            minimumOrder: data.minimumOrder,
-            Available: data.Available,
-            price: data.price,
-        }
 
-        fetch('http://localhost:5000/parts', {
+        const image = data.img[0];
+        const formData = new FormData();
+        formData.append('image', image);
+        const url = `https://api.imgbb.com/1/upload?key=${imageKey}`;
+        fetch(url, {
             method: 'POST',
-            headers: {
-                'Content-Type': 'application/json',
-            },
-            body: JSON.stringify(partsData),
+            body: formData
         })
-            .then(response => response.json())
-            .then(data => {
-                toast.success('your product is been placed')
-                console.log('Success:', data);
-              
+            .then(res => res.json())
+
+            .then(result => {
+                if (result.success) {
+                    const img = result.data.url;
+                    const partsData = {
+
+                        name: data?.name,
+                        img: img,
+                        decription: data.decription,
+                        phone: data.phone,
+                        minimumOrder: data.minimumOrder,
+                        available: data.available,
+                        price: data.price,
+                    }
+                    fetch('http://localhost:5000/parts', {
+                        method: 'POST',
+                        headers: {
+                            'Content-Type': 'application/json',
+                        },
+                        body: JSON.stringify(partsData),
+                    })
+                        .then(response => response.json())
+                        .then(data => {
+                            toast.success('your product is been placed')
+                            console.log('Success:', data);
+
+                        })
+                }
+
+
             })
+
+
+
+
+
+
 
 
     };

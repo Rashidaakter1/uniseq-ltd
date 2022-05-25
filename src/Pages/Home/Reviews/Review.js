@@ -5,17 +5,17 @@ const Review = ({ review }) => {
     return (
         <div className='m-4' >
 
-            <div class="card bg-sky-100 shadow-xl">
-                <div class="card-body">
-                <h2 class="card-title text-3xl text-cyan-900">{review.name}</h2>
+            <div className="card bg-sky-100 shadow-xl">
+                <div className="card-body">
+                <h2 className="card-title text-3xl text-cyan-900">{review.name}</h2>
                     <p className='font-bold text-cyan-900'>{review.description}</p>
                     <p  className='font-bold text-cyan-900'>Ratings : {review.ratings}</p>
                     
                 </div>
             </div>
-            {/* <div class="card  lg:card-side bg-base-100 shadow-xl">
+            {/* <div className="card  lg:card-side bg-base-100 shadow-xl">
                 <figure><img src="https://api.lorem.space/image/album?w=400&h=400" alt="Album" /></figure>
-                <div class="card-body">
+                <div className="card-body">
 
                     
                     

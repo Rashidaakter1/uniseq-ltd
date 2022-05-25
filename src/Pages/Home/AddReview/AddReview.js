@@ -43,14 +43,14 @@ const AddReview = () => {
     
     return (
         <div className='text-center'>
-            <form onSubmit={handleSubmit(onSubmit)} class=" w-full max-w-xs">
-                <label class="label">
-                    <span class="label-text font-bold text-2xl">Give Your Reviews here</span>
+            <form onSubmit={handleSubmit(onSubmit)} className=" w-full max-w-xs">
+                <label className="label">
+                    <span className="label-text font-bold text-2xl">Give Your Reviews here</span>
                 </label>
                 
-                <textarea  {...register("description")} class="input input-bordered w-full max-w-xs mb-3" cols="30" rows="10"></textarea>
+                <textarea  {...register("description")} className="input input-bordered w-full max-w-xs mb-3" cols="30" rows="10"></textarea>
 
-                <select {...register("ratings")} class="select select-bordered select-sm w-full max-w-xs mb-3">
+                <select {...register("ratings")} className="select select-bordered select-sm w-full max-w-xs mb-3">
                     <option disabled selected>Give your ratings</option>
                     <option value="1">1</option>
                     <option value="2">2</option>

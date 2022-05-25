@@ -36,7 +36,7 @@ const MakeAdmin = ({ user, refetch, index }) => {
                 <th>{index + 1}</th>
                 <td>{displayName}</td>
                 <td>{email}</td>
-                <td>{role !== 'admin' && <button class="btn btn-ghost" onClick={makeAdmin} >Make admin</button>}</td>
+                <td>{role !== 'admin' && <button className="btn btn-ghost" onClick={makeAdmin} >Make admin</button>}</td>
             </tr>
 
         </tbody>

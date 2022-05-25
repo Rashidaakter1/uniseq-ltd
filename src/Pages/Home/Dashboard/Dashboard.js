@@ -10,17 +10,17 @@ const Dashboard = () => {
     return (
         <div data-theme='fantasy'>
 
-            <div class="drawer drawer-mobile">
-                <input id="dashboardBar" type="checkbox" class="drawer-toggle" />
-                <div class="drawer-content flex flex-col ">
+            <div className="drawer drawer-mobile">
+                <input id="dashboardBar" type="checkbox" className="drawer-toggle" />
+                <div className="drawer-content flex flex-col ">
                     {/* <!-- Page content here --> */}
                     <h1 className='text-4xl text-center font-bold mb-10 mt-8'>Welcome To Dashboard</h1>
                     <Outlet></Outlet>
 
                 </div>
-                <div class="drawer-side">
-                    <label for="dashboardBar" class="drawer-overlay"></label>
-                    <ul class="menu p-4 overflow-y-auto w-50 bg-base-100 text-base-content mt-24">
+                <div className="drawer-side">
+                    <label for="dashboardBar" className="drawer-overlay"></label>
+                    <ul className="menu p-4 overflow-y-auto w-50 bg-base-100 text-base-content mt-24">
                         {/* <!-- Sidebar content here --> */}
 
                         {!admin &&

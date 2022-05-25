@@ -49,13 +49,13 @@ const Login = () => {
         <div className='h-screen sm:h-full' data-theme='fantasy'>
             <h2 className="text-4xl text-primary font-bold text-center p-6 mb-10">LogIn</h2>
             <div className='flex justify-center items-center'>
-                <div class="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-purple-100">
-                    <form class="card-body" onSubmit={handleSubmit(onSubmit)}>
-                        <div class="form-control">
-                            <label class="label">
-                                <span class="label-text">Email</span>
+                <div className="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-purple-100">
+                    <form className="card-body" onSubmit={handleSubmit(onSubmit)}>
+                        <div className="form-control">
+                            <label className="label">
+                                <span className="label-text">Email</span>
                             </label>
-                            <input type="email" placeholder="email" class="input input-bordered"
+                            <input type="email" placeholder="email" className="input input-bordered"
                                 {...register("email", {
                                     required: true,
                                     pattern: {
@@ -70,11 +70,11 @@ const Login = () => {
 
                             </p>
                         </div>
-                        <div class="form-control">
-                            <label class="label">
-                                <span class="label-text">Password</span>
+                        <div className="form-control">
+                            <label className="label">
+                                <span className="label-text">Password</span>
                             </label>
-                            <input type="password" placeholder="password" class="input input-bordered"
+                            <input type="password" placeholder="password" className="input input-bordered"
                                 {...register("password", {
                                     required: true,
                                     minLength: {
@@ -89,12 +89,12 @@ const Login = () => {
 
                             </p>
 
-                            <label class="label">
-                                <a href="#" class="label-text-alt link link-hover">Forgot password?</a>
+                            <label className="label">
+                                <a href="#" className="label-text-alt link link-hover">Forgot password?</a>
                             </label>
                         </div>
-                        <div class="form-control mt-6">
-                            <input type="submit" class="btn btn-primary" value='Login' />
+                        <div className="form-control mt-6">
+                            <input type="submit" className="btn btn-primary" value='Login' />
                             <button onClick={() => signInWithGoogle()} className='btn btn-primary mt-4' >
                                 <div className='flex flex-row items-center'>
 
