@@ -29,7 +29,8 @@ const Purchase = () => {
             email: user?.email,
             address: data.address,
             phone: data.phone,
-            minimumOrder: data.quantity
+            minimumOrder: data.quantity,
+            price:part?.price
         }
 
         fetch('http://localhost:5000/orders', {
@@ -43,7 +44,7 @@ const Purchase = () => {
             .then(data => {
                 toast.success('your order is placed')
                 console.log('Success:', data);
-                navigate('/dashboard')
+                navigate('/dashboard/myorders')
             })
 
         console.log(data,orderData)

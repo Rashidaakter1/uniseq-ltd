@@ -37,20 +37,21 @@ const MyOrders = () => {
                             <th>Name</th>
                             <th>Email</th>
                             <th>Materials</th>
-                            <th></th>
-                            <th></th>
+                            <th>Manage Orders</th>
+                            <th>Payment</th>
+                            
                         </tr>
                     </thead>
 
                   
-                    {/* {
+                    {
                         orders.map((order, index) => <MyOrder
                             key={order._id}
                             order={order}
                             index={index}
                             refetch={refetch}
                         ></MyOrder>)
-                    } */}
+                    }
 
 
                 </table>

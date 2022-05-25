@@ -1,6 +1,6 @@
 # UNISEQ COMPO 
 
-Here the live website link [uniseq compo](https://nextbike-204d0.web.app).
+Here the live website link [uniseq compo](https://computer-parts-d6618.web.app/).
 
 ### Website Description
 This is an Inventory management website for Cars and Bikes .

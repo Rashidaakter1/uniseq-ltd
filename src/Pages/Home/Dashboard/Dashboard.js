@@ -1,6 +1,6 @@
 import React from 'react';
 import { useAuthState } from 'react-firebase-hooks/auth';
-import { Link, Outlet } from 'react-router-dom';
+import { Link, NavLink, Outlet } from 'react-router-dom';
 import auth from '../../../firebase.init';
 import useAdmin from '../../../hooks/useAdmin';
 
@@ -12,29 +12,30 @@ const Dashboard = () => {
 
             <div className="drawer drawer-mobile">
                 <input id="dashboardBar" type="checkbox" className="drawer-toggle" />
-                <div className="drawer-content flex flex-col ">
+                <div className="drawer-content flex flex-col bg-red-100 px-10">
                     {/* <!-- Page content here --> */}
                     <h1 className='text-4xl text-center font-bold mb-10 mt-8'>Welcome To Dashboard</h1>
                     <Outlet></Outlet>
 
                 </div>
-                <div className="drawer-side">
-                    <label for="dashboardBar" className="drawer-overlay"></label>
+                <div className="drawer-side ">
+                    <label for="dashboardBar" className="drawer-overlay "></label>
                     <ul className="menu p-4 overflow-y-auto w-50 bg-base-100 text-base-content mt-24">
                         {/* <!-- Sidebar content here --> */}
 
+                        <li><NavLink to='/dashboard'>My Profile</NavLink></li>
                         {!admin &&
                             <>
-                                <li><Link to='/dashboard'>My Orders</Link></li>
+                                <li><NavLink to='/dashboard/myorders'>My Orders</NavLink></li>
 
-                                <li><Link to='/dashboard/addreview'>Add Review</Link></li>
+                                <li><NavLink to='/dashboard/addreview'>Add Review</NavLink></li>
                             </>}
-                        <li><Link to='/dashboard/myprofile'>My Profile</Link></li>
+                        
                         {admin && <>
-                            <li><Link to='/dashboard/manageusers'>Make Admin</Link></li>
-                            <li><Link to='/dashboard/addproduct'>Add New Product</Link></li>
-                            <li><Link to='/dashboard/manageproduct'>Manage Products</Link></li>
-                            <li><Link to='/dashboard/manageorder'>Manage Order</Link></li>
+                            <li><NavLink to='/dashboard/manageusers'>Make Admin</NavLink></li>
+                            <li><NavLink to='/dashboard/addproduct'>Add New Product</NavLink></li>
+                            <li><NavLink to='/dashboard/manageproduct'>Manage Products</NavLink></li>
+                            <li><NavLink to='/dashboard/manageorder'>Manage Order</NavLink></li>
                         </>}
 
                     </ul>
