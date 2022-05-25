@@ -41,14 +41,16 @@ const MyOrders = () => {
                             <th></th>
                         </tr>
                     </thead>
-                    {
+
+                  
+                    {/* {
                         orders.map((order, index) => <MyOrder
                             key={order._id}
                             order={order}
                             index={index}
                             refetch={refetch}
                         ></MyOrder>)
-                    }
+                    } */}
 
 
                 </table>
