@@ -2,32 +2,36 @@
 
 Here the live website link [uniseq compo](https://computer-parts-d6618.web.app/).
 
+
 ### Website Description
-This is an Inventory management website for Cars and Bikes .
-here you find your car or bike as per your personality.
+This is a parts manufacturer website for Computer parts .
+here you find your necessary products for your computer .
 
 
 ## `website Features and Functionality `
 
 * ### Home page
-   1.Inventory Items  
-     * some inventory items that are shown  \
-   2.Reviews  
-     * some reviews from people who was connected with us
+   1.Blogs 
+     * some question and answer  \
+   2.Portfolio
+     * my portfolio are given
+   3.Dashboard  
 * ### Login page which can be toggled to Signup Page.
-* ### Manage Item 
-    * All the product are shown 
-* ### Add Item 
-    * You can add any item to your own
-* ### My Item 
-    * If you are signed in ,then your clicked item will be shown
+* ### Dashboard
+    * In dashboard you can see orders, profile and add review .this is    for user application
+    * Add review is dynamic , you can add your review 
+    * In profile you can update your profile
+* ### Dashboard for Admin
+    * In dashboard you can see manage orders,profile and add products .this is admin application
+    *Add product page is also dynamic .Admin can add product as he want
+
 
 ### `A list of technologies (frameworks, libraries) used in this project.`
 
 * react router
 * firebase
-* bootstrap
-* react bootstrap
+* daisyui
+* stripe js
 * react firebase hooks
 
 
