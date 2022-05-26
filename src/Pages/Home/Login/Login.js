@@ -108,7 +108,7 @@ const Login = () => {
 
                         </div>
                         <div>
-                            <p>New to Compo? <Link to='/register' >Register </Link></p>
+                            <p>New to Uniseq? <Link className='link link-secondary' to='/register' >Register </Link></p>
                         </div>
                     </form>
 
