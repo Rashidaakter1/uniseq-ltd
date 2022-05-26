@@ -30,7 +30,7 @@ const AddProduct = () => {
                         available: data.available,
                         price: data.price,
                     }
-                    fetch('http://localhost:5000/parts', {
+                    fetch('https://obscure-waters-19361.herokuapp.com/parts', {
                         method: 'POST',
                         headers: {
                             'Content-Type': 'application/json',

@@ -23,7 +23,7 @@ const AddReview = () => {
         }
         console.log(reviewData);
 
-        fetch(`http://localhost:5000/reviews/${user?.email}`, {
+        fetch(`https://obscure-waters-19361.herokuapp.com/reviews/${user?.email}`, {
             method: 'PUT',
             headers: {
                 'Content-Type': 'application/json',

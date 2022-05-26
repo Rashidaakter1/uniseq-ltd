@@ -15,7 +15,7 @@ const MyProfile = () => {
         location:data?.location,
         phone:data?.phone
        };
-      fetch(`http://localhost:5000/users/${user?.email}`, {
+      fetch(`https://obscure-waters-19361.herokuapp.com/users/${user?.email}`, {
                 method:'PUT',
                 headers: {
                     'content-type': 'application/json'

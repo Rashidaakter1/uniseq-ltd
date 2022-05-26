@@ -17,7 +17,7 @@ const Purchase = () => {
     const { register, handleSubmit } = useForm();
 
     const { isLoading, error, data: part } = useQuery('parts', () =>
-        fetch(`http://localhost:5000/parts/${id}`).then(res =>
+        fetch(`https://obscure-waters-19361.herokuapp.com/parts/${id}`).then(res =>
             res.json()
         )
 
@@ -34,7 +34,7 @@ const Purchase = () => {
             price: part?.price
         }
 
-        fetch('http://localhost:5000/orders', {
+        fetch('https://obscure-waters-19361.herokuapp.com/orders', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
@@ -102,11 +102,18 @@ const Purchase = () => {
                     </div>
                     <div className="">
                     <div className="card-body card lg:w-3/4 sm:w-44 bg-base-100 shadow-xl">
-                        <h2 className="card-title">{part.name}</h2>
-                        <p>{part.description}</p>
-                        <p>{part.minimumOrder}</p>
-                        <p>{part.available}</p>
-                        <p>{part.price}</p>
+                        <h2 className="card-title">
+                            <span className='font-bold text-xl text-lime-900'>
+                                Product Name : 
+                                </span>{part.name}</h2>
+                        <p ><span className='font-bold text-lg text-lime-900'>
+                        Description : </span> {part.description}</p>
+                        <p ><span className='font-bold text-lg text-lime-900'>
+                        Minimum Order : </span> {part.minimumOrder}</p>
+                        <p ><span className='font-bold text-lg text-lime-900'>
+                        Available : </span> {part.available}</p>
+                        <p ><span className='font-bold text-lg text-lime-900'>
+                        Price : </span> {part.price}</p>
 
 
                         <form onSubmit={handleSubmit(onSubmit)}>

@@ -1,63 +1,63 @@
 [
     {
-        "_id":1,
-        "name":"Mouse",
-        "img" : "https://upload.wikimedia.org/wikipedia/commons/2/22/3-Tasten-Maus_Microsoft.jpg",
-        "description":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa blanditiis commodi in. Soluta, ipsam? Quam?",
+        
+        "name":"HP OMEN Mouse with SteelSeries",
+        "img" : "https://www.startech.com.bd/image/cache/catalog/Accessories/Mouse/HP%20Mouse/HP%20OMEN%20Mouse%20SteelSeries-228x228.png",
+        "description":"16.8 million RGB Color Best-in-class CPI Adjustments 30 million clicks",
         "minimumOrder" : 100,
-        "available":1000,
-        "price":1000
+        "available":100000,
+        "price":3500
 
 
     },
     {
-        "_id":1,
-        "name":"Mouse",
-        "img" : "https://upload.wikimedia.org/wikipedia/commons/2/22/3-Tasten-Maus_Microsoft.jpg",
-        "description":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa blanditiis commodi in. Soluta, ipsam? Quam?",
+        
+        "name":"Acer EB192Q 18.5 Inch HD Backlit LED LCD Monitor",
+        "img" : "https://www.startech.com.bd/image/cache/catalog/monitor/acer/eb192q/eb192q-01-228x228.jpg",
+        "description":"Display: 18.5 Inch (1366x768) HD Backlit LED LCD Panel Technology: TN Panel Environment-Friendly Comfortable Views",
         "minimumOrder" : 100,
-        "available":1000,
-        "price":1000
+        "available":100000,
+        "price":9000
 
     },
     {
-        "_id":1,
-        "name":"Mouse",
-        "img" : "https://upload.wikimedia.org/wikipedia/commons/2/22/3-Tasten-Maus_Microsoft.jpg",
+        
+        "name":"Keyboard",
+        "img" : "https://www.startech.com.bd/image/cache/catalog/keyboard/fantech/p31/p31-01-228x228.jpg",
         "description":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa blanditiis commodi in. Soluta, ipsam? Quam?",
         "minimumOrder" : 100,
-        "available":1000,
-        "price":1000
+        "available":100000,
+        "price":300
 
     },
     {
-        "_id":1,
-        "name":"Mouse",
-        "img" : "https://upload.wikimedia.org/wikipedia/commons/2/22/3-Tasten-Maus_Microsoft.jpg",
-        "description":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa blanditiis commodi in. Soluta, ipsam? Quam?",
+        
+        "name":"Deepcool UD551 ARGB CPU Air Cooler",
+        "img" : "https://www.startech.com.bd/image/cache/catalog/cpu-cooler/deepcool/ud551/ud551-01-228x228.jpg",
+        "description":"Fan Speed 500-800 Top Flow Design, Glamourous Ring Light LED Type: Addressable RGB LED Application For AMD AM4 only",
         "minimumOrder" : 100,
-        "available":1000,
-        "price":1000
+        "available":100000,
+        "price":1500
 
     },
     {
-        "_id":1,
-        "name":"Mouse",
-        "img" : "https://upload.wikimedia.org/wikipedia/commons/2/22/3-Tasten-Maus_Microsoft.jpg",
-        "description":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa blanditiis commodi in. Soluta, ipsam? Quam?",
+        
+        "name":"Asus TUF GAMING B660M-PLUS D4 12th Gen mATX Motherboard",
+        "img" : "https://www.startech.com.bd/image/cache/catalog/motherboard/asus/tuf-gaming-b660m-plus-d4/tuf-gaming-b660m-plus-d4-01-228x228.jpg",
+        "description":"Supported Processors 12th Gen Intel Core Pentium Gold & Celeron Pentium Gold & Celeron Supported Memory: 4 x DIMM, Max. 128GB, DDR4 Supported Socket: Intel Socket LGA1700 ",
         "minimumOrder" : 100,
-        "available":1000,
-        "price":1000
+        "available":100000,
+        "price":19500
 
     },
     {
-        "_id":1,
-        "name":"Mouse",
-        "img" : "https://upload.wikimedia.org/wikipedia/commons/2/22/3-Tasten-Maus_Microsoft.jpg",
-        "description":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa blanditiis commodi in. Soluta, ipsam? Quam?",
+        
+        "name":"1stPlayer FK 300W Power Supply",
+        "img" : "https://www.startech.com.bd/image/cache/catalog/power-supply/1stplayer/fk-300w/fk-300w-01-228x228.jpg",
+        "description":"Modular: Non-Modular, Input Frequency: 50-60Hz Input Current: Current 8/10A MAX Fan Size120MM Hydraulic Bearing",
         "minimumOrder" : 100,
-        "available":1000,
-        "price":1000
+        "available":100000,
+        "price":2200
 
     }
     

@@ -9,7 +9,7 @@ const MyOrder = ({ order, index, refetch, setDeletingOrder }) => {
 
             <tr>
                 <th>{index + 1}</th>
-                <td>{name}</td>
+                <td className='uppercase'>{name}</td>
                 <td>{email}</td>
                 <td>{productName}</td>
 

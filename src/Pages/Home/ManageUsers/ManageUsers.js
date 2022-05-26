@@ -7,7 +7,7 @@ const ManageUsers = () => {
 
 
     const { isLoading, error, data: users, refetch } = useQuery('users', () =>
-        fetch(`http://localhost:5000/users`).then(res =>
+        fetch(`https://obscure-waters-19361.herokuapp.com/users`).then(res =>
             res.json()
         )
 
