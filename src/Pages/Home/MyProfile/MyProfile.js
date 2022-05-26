@@ -39,7 +39,7 @@ const MyProfile = () => {
                 <input type='text' placeholder='Phone' className='input input-bordered mb-3 ' {...register("phone")} />
                 <br />
                 
-                <input type="submit" className='btn btn-outline' value='Update Your Profile' />
+                <input type="submit" className='btn btn-outline btn-sm' value='Update Your Profile' />
             </form>
         </div>
     );

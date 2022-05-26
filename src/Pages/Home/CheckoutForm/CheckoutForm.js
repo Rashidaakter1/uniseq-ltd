@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { CardElement, useStripe, useElements } from '@stripe/react-stripe-js';
+import { useNavigate } from 'react-router-dom';
 
 const CheckoutForm = ({ order }) => {
     const stripe = useStripe();
@@ -12,6 +13,7 @@ const CheckoutForm = ({ order }) => {
     const [transactionId, setTransactionId] = useState('');
 
     const { _id, price, name, email } = order;
+    const navigate=useNavigate()
 
     useEffect(() => {
         fetch('http://localhost:5000/create-payment-intent', {
@@ -92,6 +94,7 @@ const CheckoutForm = ({ order }) => {
                 .then(data => {
                     setProcessing(false);
                     console.log(data);
+                    navigate('/dashboard/myorders')
                 })
         }
 
