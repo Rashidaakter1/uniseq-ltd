@@ -1,4 +1,4 @@
-# UNISEQ COMPO 
+# UNISEQ TECH & ENGINEERING LTD
 
 Here the live website link [uniseq compo](https://computer-parts-d6618.web.app/).
 
