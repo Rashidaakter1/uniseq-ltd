@@ -19,7 +19,7 @@ const ManageUsers = () => {
     console.log(users);
     return (
         <div>
-            <h1 className=''>ManageUsers : {users.length}</h1>
+            
             <div className="overflow-x-auto">
                 <table className="table table-zebra w-full">
 

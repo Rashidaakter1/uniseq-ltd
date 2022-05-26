@@ -3,7 +3,7 @@ import { useForm } from "react-hook-form";
 import { toast } from 'react-toastify';
 
 const AddProduct = () => {
-    const { register, handleSubmit } = useForm();
+    const { register, handleSubmit ,reset} = useForm();
     const imageKey = '74e5c723ad8c8f24be7ea70a54d7e813';
     const onSubmit = data => {
 
@@ -41,7 +41,7 @@ const AddProduct = () => {
                         .then(data => {
                             toast.success('your product is been placed')
                             console.log('Success:', data);
-
+                            reset()
                         })
                 }
 
