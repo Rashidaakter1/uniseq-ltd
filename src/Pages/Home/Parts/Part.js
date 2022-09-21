@@ -8,14 +8,14 @@ const Part = ({ part }) => {
     <div className="">
       <div
         style={{ backgroundColor: " #f9f8f4" }}
-        class="card md:w-auto lg:w-auto h-full shadow-xl"
+        class="card md:w-auto h-full lg:w-auto  shadow-xl"
       >
         <figure class="px-10 pt-10">
           <img src={img} alt="parts" class="rounded-xl" />
         </figure>
         <div class="card-body items-center ">
           <h2 class="card-title">{name}</h2>
-          <p> {description}</p>
+          <p className="text-justify"> {`${description?.slice(0, 50)} ...`}</p>
 
           <p>
             Price : $ <span className="font-bold">{price}</span>

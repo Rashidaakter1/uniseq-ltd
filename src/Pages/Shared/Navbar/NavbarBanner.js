@@ -1,13 +1,14 @@
 import React from "react";
 import { FiPhoneCall, FiClock } from "react-icons/fi";
 import { FaSearch } from "react-icons/fa";
+import { GiComputerFan } from "react-icons/gi";
 const NavbarBanner = () => {
   return (
     <div>
       <div className="">
         <div style={{ backgroundColor: "#efeee8" }} className="bg-base-100  ">
-          <div className="flex justify-between p-2">
-            <div>
+          <div className="lg:flex sm:hidden justify-between p-2">
+            <div >
               <a className="normal-case text-lg">Welcome to UniseQ </a>
             </div>
 
@@ -76,13 +77,21 @@ const NavbarBanner = () => {
                   </div>
                   <div className="">
                     <h3>Need Help</h3>
-                    <h4>8AM - 6PM</h4>
+                    <h4>+8801758971667</h4>
                   </div>
                 </div>
               </li>
             </ul>
           </div>
-          <a className=" normal-case text-xl">daisyUI</a>
+          <a href='/' className="normal-case text-xl flex justify-center items-center">
+            <div style={{ color: "#c45d3c" }} className="lg:text-4xl md:text-3xl text-2xl">
+              <GiComputerFan />
+            </div>
+            <img
+              src="https://i.ibb.co/55pVMFp/Gold-Beige-Monogram-Initials-Personal-Brand-Typography-Logo-2.png"
+              alt=""
+            />
+          </a>
         </div>
         <div className="navbar-center hidden lg:flex">
           <ul className="menu menu-horizontal p-0">
@@ -105,7 +114,7 @@ const NavbarBanner = () => {
                 </div>
                 <div className="">
                   <h3>Need Help </h3>
-                  <h4>8AM - 6PM</h4>
+                  <h4>+8801758971667</h4>
                 </div>
               </div>
             </li>

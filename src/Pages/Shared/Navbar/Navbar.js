@@ -11,7 +11,7 @@ const Navbar = () => {
         localStorage.removeItem('accessToken')
     };
     return (
-        <div  style={{backgroundColor:"#145369",color:"#acc4ca"}} className="navbar bg-base-100 sticky-top">
+        <div  style={{backgroundColor:"#446a73",color:"#adc5cb"}} className="navbar bg-base-100 sticky-top">
             <div className="navbar-start">
                 <div className="dropdown">
                     <label tabindex="0" className="btn btn-ghost lg:hidden">
