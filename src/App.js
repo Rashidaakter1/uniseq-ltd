@@ -31,7 +31,7 @@ function App() {
       <NavbarBanner />
       <Navbar></Navbar>
 
-      <main className="mx-3"> 
+      <main > 
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/home" element={<Home />} />

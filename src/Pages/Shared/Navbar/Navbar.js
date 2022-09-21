@@ -11,7 +11,7 @@ const Navbar = () => {
         localStorage.removeItem('accessToken')
     };
     return (
-        <div className="navbar bg-base-100 sticky-top">
+        <div  style={{backgroundColor:"#145369",color:"#acc4ca"}} className="navbar bg-base-100 sticky-top">
             <div className="navbar-start">
                 <div className="dropdown">
                     <label tabindex="0" className="btn btn-ghost lg:hidden">
@@ -30,7 +30,7 @@ const Navbar = () => {
                 </div>
                
             </div>
-            <div className="navbar-center hidden lg:flex">
+            <div className="navbar-start hidden lg:flex">
                 <NavLink to='/home'>Home</NavLink>
                 <ul className="menu menu-horizontal p-0">
                     <li>{user && <Link to='/dashboard'>Dashboard</Link>}</li>

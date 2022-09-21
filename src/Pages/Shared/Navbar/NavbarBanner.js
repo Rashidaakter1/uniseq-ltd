@@ -3,30 +3,35 @@ import { FiPhoneCall, FiClock } from "react-icons/fi";
 import { FaSearch } from "react-icons/fa";
 const NavbarBanner = () => {
   return (
-    <div className="">
-      <div className="flex justify-between  bg-base-100 mx-5 my-2 ">
-        <div className="flex justify-between items-center">
-          <a className="normal-case text-sm ">Welcome to UniseQ </a>
-        </div>
-        <div className="">
-          <ul className="flex justify-between  px-4">
-            <li className="lg:px-6 px-2 md:px-4">
-              <a>Support</a>
-            </li>
+    <div>
+      <div className="">
+        <div style={{ backgroundColor: "#efeee8" }} className="bg-base-100  ">
+          <div className="flex justify-between p-2">
+            <div>
+              <a className="normal-case text-lg">Welcome to UniseQ </a>
+            </div>
 
-            <li className="lg:px-6 px-2 md:px-4">
-              <a>Location </a>
-            </li>
-            <li className=" lg:px-6 px-2 md:px-4">
-              <a>Carreer </a>
-            </li>
-            <li className=" lg:px-6 px-2 md:px-4">
-              <p className="mt-2">
-                {" "}
-                <FaSearch />
-              </p>
-            </li>
-          </ul>
+            <div className="">
+              <ul className="flex justify-between  px-4">
+                <li className="lg:px-6 px-2 md:px-4">
+                  <a>Support</a>
+                </li>
+
+                <li className="lg:px-6 px-2 md:px-4">
+                  <a>Location </a>
+                </li>
+                <li className=" lg:px-6 px-2 md:px-4">
+                  <a>Carreer </a>
+                </li>
+                <li className=" lg:px-6 px-2 md:px-4">
+                  <p className="mt-2">
+                    {" "}
+                    <FaSearch />
+                  </p>
+                </li>
+              </ul>
+            </div>
+          </div>
         </div>
       </div>
       <div className="navbar ">
@@ -107,7 +112,11 @@ const NavbarBanner = () => {
           </ul>
         </div>
         <div className="navbar-end lg:mr-16 lg:my-4">
-          <a href="/home" className="btn">
+          <a
+            style={{ backgroundColor: " #c45d3c" }}
+            href="/home"
+            className="btn"
+          >
             Make An Appointment
           </a>
         </div>
