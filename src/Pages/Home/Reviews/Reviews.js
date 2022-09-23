@@ -1,6 +1,7 @@
 import React from "react";
 import { GiComputerFan } from "react-icons/gi";
 import { useQuery } from "react-query";
+import { Link } from "react-router-dom";
 import Loading from "../../Shared/Loading/Loading";
 import Review from "./Review";
 
@@ -33,6 +34,7 @@ const Reviews = () => {
           <Review key={review._id} review={review}></Review>
         ))}
       </div>
+      {/* <Link to='dashboard/addreview'> Add your review</Link> */}
     </div>
   );
 };

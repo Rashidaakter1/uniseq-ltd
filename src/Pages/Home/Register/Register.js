@@ -48,7 +48,7 @@ const Register = () => {
     }
     
     return (
-        <div className='h-screen sm:h-full' data-theme='fantasy'>
+        <div className='my-16' data-theme='fantasy'>
             <h2 className="text-4xl text-primary font-bold text-center p-6 mb-4">Register</h2>
             <div className='flex justify-center items-center  '>
                 <div className="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-purple-100">

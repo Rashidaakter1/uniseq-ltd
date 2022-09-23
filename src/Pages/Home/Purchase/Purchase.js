@@ -104,15 +104,15 @@ const Purchase = () => {
 
 
     return (
-        <div data-theme='fantasy' className='d-flex justify-center'>
+        <div className=' mx-5'>
 
-            <div className="mx-auto ">
+            <div className="">
                 <div className='mb-10 '>
                     <div className=''>
-                        <figure><img className='w-1/2 mx-auto' src={part.img} alt="" /></figure>
+                        <figure><img className='' src={part.img} alt="" /></figure>
                     </div>
                     <div className="">
-                        <div className="card-body card lg:w-3/4 sm:w-44 bg-base-100 shadow-xl">
+                        <div className="card-body card lg:w-3/4 sm:w-44 bg-base-100 ">
                             <h2 className="card-title">
                                 <span className='font-bold text-xl text-lime-900'>
                                     Product Name :

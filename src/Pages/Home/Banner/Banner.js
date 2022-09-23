@@ -25,13 +25,13 @@ const Banner = () => {
         className="mySwiper"
       >
         <SwiperSlide>
-          <img src="https://wporganic.com/theme/phone-repair/wp-content/uploads/2017/02/slider-1.jpg" alt="" />
+          <img style={{opacity: ".9"}} src="https://wporganic.com/theme/phone-repair/wp-content/uploads/2017/02/slider-1.jpg" alt="" />
         </SwiperSlide>
         <SwiperSlide>
-          <img src="https://wporganic.com/theme/phone-repair/wp-content/uploads/2017/02/slider-3.jpg" alt=""/>
+          <img style={{opacity: ".9"}} src="https://wporganic.com/theme/phone-repair/wp-content/uploads/2017/02/slider-3.jpg" alt=""/>
         </SwiperSlide>
         <SwiperSlide>
-          <img src="https://wporganic.com/theme/phone-repair/wp-content/uploads/2017/02/slider-2.jpg" alt="" />
+          <img style={{opacity: ".9"}} src="https://wporganic.com/theme/phone-repair/wp-content/uploads/2017/02/slider-2.jpg" alt="" />
         </SwiperSlide>
        
       </Swiper>

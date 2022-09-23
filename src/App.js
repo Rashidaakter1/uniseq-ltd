@@ -24,6 +24,7 @@ import ManageProducts from "./Pages/Home/ManageProducts/ManageProducts";
 import ManageOrders from "./Pages/Home/ManageOrders/ManageOrders";
 import AddProduct from "./Pages/Home/AddProduct/AddProduct";
 import NavbarBanner from "./Pages/Shared/Navbar/NavbarBanner";
+import AllProducts from "./Pages/Home/AllProducts/AllProducts";
 
 function App() {
   return (
@@ -45,6 +46,7 @@ function App() {
           />
 
           <Route path="/login" element={<Login></Login>} />
+          <Route path="/allproducts" element={<AllProducts></AllProducts>} />
           <Route path="/register" element={<Register></Register>} />
           <Route path="/blogs" element={<Blogs></Blogs>} />
           <Route path="/portfolio" element={<MyPortfolio></MyPortfolio>} />

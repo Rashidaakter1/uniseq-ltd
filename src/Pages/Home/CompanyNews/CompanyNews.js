@@ -35,7 +35,7 @@ const CompanyNews = () => {
             Tech has over 700 employees and is growing more and more, working
             diligently to fulfill the Main Criteria of Uniseq Tech’s Motto or
             Vision.Uniseq Tech also has two branches in Chittagong...
-            <div className="mx-auto my-4">
+            <div className="my-4 text-right">
               <a
                 style={{ backgroundColor: " #c45d3c" }}
                 href="/home"
@@ -62,7 +62,7 @@ const CompanyNews = () => {
             Uniseq Tech has a total of 16 Physical outlets all over the country;
             selling genuine Tech products. Among them, 9 outlets are in Dhaka as
             it’s the capital city...
-            <div className="mx-auto my-4">
+            <div className="text-right mx-auto my-4">
               <a
                 style={{ backgroundColor: " #c45d3c" }}
                 href="/home"
@@ -89,7 +89,7 @@ const CompanyNews = () => {
           providing our customers with a delivery system so that they can order
           online and receive their products from their area. They do not have to
           travel long distances to get their desired product...
-          <div className="mx-auto my-4">
+          <div className="text-right my-4">
             <a
               style={{ backgroundColor: " #c45d3c" }}
               href="/home"
@@ -100,6 +100,7 @@ const CompanyNews = () => {
           </div>
         </p>
       </div>
+      <hr />
     </div>
   );
 };

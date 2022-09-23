@@ -8,7 +8,7 @@ const NavbarBanner = () => {
       <div className="">
         <div style={{ backgroundColor: "#efeee8" }} className="bg-base-100  ">
           <div className="lg:flex sm:hidden justify-between p-2">
-            <div >
+            <div>
               <a className="normal-case text-lg">Welcome to UniseQ </a>
             </div>
 
@@ -83,10 +83,10 @@ const NavbarBanner = () => {
               </li>
             </ul>
           </div>
-          <a href='/' className="normal-case text-xl flex justify-center items-center">
-            <div style={{ color: "#c45d3c" }} className="lg:text-4xl md:text-3xl text-2xl">
-              <GiComputerFan />
-            </div>
+          <a
+            href="/"
+            className="normal-case text-xl flex justify-center items-center"
+          >
             <img
               src="https://i.ibb.co/55pVMFp/Gold-Beige-Monogram-Initials-Personal-Brand-Typography-Logo-2.png"
               alt=""

@@ -91,7 +91,7 @@ const Parts = () => {
         <div className="lg:mx-6 mx-auto my-4">
           <a
             style={{ backgroundColor: " #c45d3c" }}
-            href="/home"
+            href="/allproducts"
             className="btn"
           >
             View All Products
