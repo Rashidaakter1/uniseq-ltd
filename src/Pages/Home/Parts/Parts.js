@@ -38,10 +38,7 @@ const Parts = () => {
         </div>
 
         <p className="text-justify">
-          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Numquam,
-          facilis cupiditate expedita explicabo nisi unde asperiores quae at.
-          Quibusdam aperiam repellendus quos nemo reiciendis, voluptates
-          possimus quod laborum consequuntur similique.
+        Technology has become a part of our daily lives and for a huge portion of our life, we are dependent on tech products daily. There is hardly a home in Bangladesh without a tech product. This is where we come in. <span className="font-semibold" style={{color: " #c45d3c"}} >UniseQ Tech & Engineering Ltd</span> had started as a Tech product shop way back in March 2007. We focused on giving the customers the best service possible
         </p>
       </div>
 

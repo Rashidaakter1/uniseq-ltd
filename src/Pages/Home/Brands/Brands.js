@@ -52,8 +52,7 @@ const Brands = () => {
         <div className="px-14 py-10">
           <h2 className="lg:text-3xl font-semibold md:text-2xl text-xl " >Do you want to repair your devices?</h2>
           <p className="lg:text-xl md:text-lg my-4 ">
-            Nunc leo arcu tempus ut est et pulvinar scelerisque lorem sed et
-            odio ut ullamcorper.
+          Undoubtedly the best perk for repairing your device instead of going for a new one is saving a lot of money, which can easily be utilized elsewhere.
           </p>
         </div>
 
