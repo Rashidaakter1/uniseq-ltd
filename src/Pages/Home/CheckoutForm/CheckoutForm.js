@@ -16,7 +16,7 @@ const CheckoutForm = ({ order }) => {
     const navigate=useNavigate()
 
     useEffect(() => {
-        fetch('https://obscure-waters-19361.herokuapp.com/create-payment-intent', {
+        fetch('https://uniseq-computer-api.onrender.com/create-payment-intent', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json',
@@ -83,7 +83,7 @@ const CheckoutForm = ({ order }) => {
                 order: _id,
                 transactionId: paymentIntent.id
             }
-            fetch(`https://obscure-waters-19361.herokuapp.com/orders/${_id}`, {
+            fetch(`https://uniseq-computer-api.onrender.com/orders/${_id}`, {
                 method: 'PATCH',
                 headers: {
                     'content-type': 'application/json',

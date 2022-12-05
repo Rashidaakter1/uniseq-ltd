@@ -7,7 +7,7 @@ const NavbarBanner = () => {
     <div>
       <div className="">
         <div style={{ backgroundColor: "#efeee8" }} className="bg-base-100  ">
-          <div className="lg:flex sm:hidden justify-between p-2">
+          <div className="lg:flex hidden justify-between p-2">
             <div>
               <a className="normal-case text-lg">Welcome to UniseQ </a>
             </div>
@@ -35,25 +35,20 @@ const NavbarBanner = () => {
           </div>
         </div>
       </div>
+
+      {/* second banner */}
+
       <div className="navbar ">
         <div className="navbar-start">
           <div className="dropdown">
             <label tabIndex={0} className="btn btn-ghost lg:hidden">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                className="h-5 w-5"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth="2"
-                  d="M4 6h16M4 12h8m-8 6h16"
-                />
-              </svg>
+              <img
+                className="normal-case text-xl flex justify-center items-center"
+                src="https://i.ibb.co/55pVMFp/Gold-Beige-Monogram-Initials-Personal-Brand-Typography-Logo-2.png"
+                alt=""
+              />
             </label>
+
             <ul
               tabIndex={0}
               className="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52"
@@ -85,7 +80,7 @@ const NavbarBanner = () => {
           </div>
           <a
             href="/"
-            className="normal-case text-xl flex justify-center items-center"
+            className="normal-case text-xl lg:flex hidden justify-center items-center"
           >
             <img
               src="https://i.ibb.co/55pVMFp/Gold-Beige-Monogram-Initials-Personal-Brand-Typography-Logo-2.png"
@@ -93,6 +88,7 @@ const NavbarBanner = () => {
             />
           </a>
         </div>
+
         <div className="navbar-center hidden lg:flex">
           <ul className="menu menu-horizontal p-0">
             <li>

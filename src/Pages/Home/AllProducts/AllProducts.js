@@ -9,7 +9,7 @@ const AllProducts = () => {
     error,
     data: parts,
   } = useQuery("parts", () =>
-    fetch("https://obscure-waters-19361.herokuapp.com/parts").then((res) =>
+    fetch("https://uniseq-computer-api.onrender.com/parts").then((res) =>
       res.json()
     )
   );

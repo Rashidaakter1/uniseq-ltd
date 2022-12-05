@@ -12,7 +12,7 @@ const stripePromise = loadStripe('pk_test_51L1ZumKizsa19VzlnRN9aaAgrum4FfCBAfft3
 
 const Payment = () => {
     const { id } = useParams()
-    const url = `https://obscure-waters-19361.herokuapp.com/orders/${id}`;
+    const url = `https://uniseq-computer-api.onrender.com/orders/${id}`;
 
     const { data: order, isLoading } = useQuery(['orders', id], () => fetch(url).then(res => res.json()));
 

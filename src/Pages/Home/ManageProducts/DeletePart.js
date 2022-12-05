@@ -5,7 +5,7 @@ const DeletePart = ({deletingParts, refetch, setDeletingParts}) => {
     const { name,_id} = deletingParts;
     const handleDelete = () => {
         
-        fetch(`https://obscure-waters-19361.herokuapp.com/parts/${_id}`, {
+        fetch(`https://uniseq-computer-api.onrender.com/parts/${_id}`, {
             method: 'DELETE',
             
         })

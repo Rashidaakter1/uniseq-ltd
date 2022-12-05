@@ -14,7 +14,7 @@ const useToken = (user) => {
         
         console.log(currentUser);
         if(email){
-            fetch(`https://obscure-waters-19361.herokuapp.com/users/${email}`, {
+            fetch(`https://uniseq-computer-api.onrender.com/users/${email}`, {
                 method:'PUT',
                 headers: {
                     'content-type': 'application/json'

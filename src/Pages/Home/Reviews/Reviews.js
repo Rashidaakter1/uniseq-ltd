@@ -11,7 +11,7 @@ const Reviews = () => {
     error,
     data: reviews,
   } = useQuery("reviews", () =>
-    fetch(`https://obscure-waters-19361.herokuapp.com/reviews`).then((res) =>
+    fetch(`https://uniseq-computer-api.onrender.com/reviews`).then((res) =>
       res.json()
     )
   );

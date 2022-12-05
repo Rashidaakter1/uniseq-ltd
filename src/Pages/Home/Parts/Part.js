@@ -8,7 +8,7 @@ const Part = ({ part }) => {
     <div className="">
       <div
         style={{ backgroundColor: " #f9f8f4" }}
-        class="card md:w-auto h-full lg:w-auto  shadow-xl"
+        class="card md:w-auto h-full lg:w-auto  shadow-2xl"
       >
         <figure class="px-10 pt-10">
           <img src={img} alt="parts" class="rounded-xl" />

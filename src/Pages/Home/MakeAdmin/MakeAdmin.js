@@ -6,7 +6,7 @@ const MakeAdmin = ({ user, refetch, index }) => {
 
     const makeAdmin = () => {
 
-        fetch(`https://obscure-waters-19361.herokuapp.com/users/admin/${email}`, {
+        fetch(`https://uniseq-computer-api.onrender.com/users/admin/${email}`, {
             method: 'PUT',
             headers: {
                 'authorization': `Bearer ${localStorage.getItem('accessToken')}`

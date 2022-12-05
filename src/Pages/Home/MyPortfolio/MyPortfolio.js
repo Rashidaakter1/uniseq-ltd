@@ -174,7 +174,7 @@ const MyPortfolio = () => {
         <hr />
 
         <Projetcs></Projetcs>
-        <div class="card-body">
+        {/* <div class="card-body">
           <p>Three of my projects:</p>
           <a
             className="link link-secondary"
@@ -196,7 +196,7 @@ const MyPortfolio = () => {
           >
             Bookstore
           </a>
-        </div>
+        </div> */}
       </div>
     </div>
   );

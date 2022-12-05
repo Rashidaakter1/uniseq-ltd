@@ -11,7 +11,7 @@ const MyOrders = () => {
     const [deletingOrder, setDeletingOrder] = useState(null);
 
     const { isLoading, error, data: orders, refetch } = useQuery('orders', () =>
-        fetch(`https://obscure-waters-19361.herokuapp.com/orders/?email=${user?.email}`, {
+        fetch(`https://uniseq-computer-api.onrender.com/orders/?email=${user?.email}`, {
             method: 'GET',
             headers: {
                 'authorization': `Bearer ${localStorage.getItem('accessToken')}`

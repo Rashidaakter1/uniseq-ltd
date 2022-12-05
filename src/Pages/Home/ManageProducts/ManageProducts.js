@@ -7,7 +7,7 @@ import Products from './Products';
 const ManageProducts = () => {
     const [deletingParts, setDeletingParts] = useState(null);
     const { isLoading, error, data: parts, refetch } = useQuery('parts', () =>
-        fetch('https://obscure-waters-19361.herokuapp.com/parts').then(res =>
+        fetch('https://uniseq-computer-api.onrender.com/parts').then(res =>
             res.json()
         )
     )

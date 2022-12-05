@@ -23,7 +23,7 @@ const AddReview = () => {
         }
         console.log(reviewData);
 
-        fetch(`https://obscure-waters-19361.herokuapp.com/reviews/${user?.email}`, {
+        fetch(`https://uniseq-computer-api.onrender.com/reviews/${user?.email}`, {
             method: 'PUT',
             headers: {
                 'Content-Type': 'application/json',

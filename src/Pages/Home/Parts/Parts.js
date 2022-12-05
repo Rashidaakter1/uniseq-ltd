@@ -17,7 +17,7 @@ const Parts = () => {
     error,
     data: parts,
   } = useQuery("parts", () =>
-    fetch("https://obscure-waters-19361.herokuapp.com/parts").then((res) =>
+    fetch("https://uniseq-computer-api.onrender.com/parts").then((res) =>
       res.json()
     )
   );
@@ -48,27 +48,27 @@ const Parts = () => {
         ))}
       </div> */}
       <Swiper
-        slidesPerView={1}
-        spaceBetween={10}
-        pagination={{
-          clickable: true,
-        }}
-        breakpoints={{
-          640: {
-            slidesPerView: 2,
-            spaceBetween: 20,
-          },
-          768: {
-            slidesPerView: 3,
-            spaceBetween: 40,
-          },
-          1024: {
-            slidesPerView: 3,
-            spaceBetween: 50,
-          },
-        }}
-        modules={[Pagination]}
-        className="mySwiper"
+       slidesPerView={1}
+       spaceBetween={10}
+       pagination={{
+         clickable: true,
+       }}
+       breakpoints={{
+         640: {
+           slidesPerView: 2,
+           spaceBetween: 20,
+         },
+         768: {
+           slidesPerView: 3,
+           spaceBetween: 40,
+         },
+         1024: {
+           slidesPerView: 3,
+           spaceBetween: 50,
+         },
+       }}
+       modules={[Pagination]}
+       className="mySwiper"
       >
         <div style={{ height: "10vh" }}>
           {parts.map((part) => (

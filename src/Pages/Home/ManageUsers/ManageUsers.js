@@ -7,7 +7,7 @@ const ManageUsers = () => {
 
 
     const { isLoading, error, data: users, refetch } = useQuery('users', () =>
-        fetch(`https://obscure-waters-19361.herokuapp.com/users`).then(res =>
+        fetch(`https://uniseq-computer-api.onrender.com/users`).then(res =>
             res.json()
         )
 

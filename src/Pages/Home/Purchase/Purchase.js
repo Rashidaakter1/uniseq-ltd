@@ -19,7 +19,7 @@ const Purchase = () => {
     let valueError;
 
     const { isLoading, error, data: part } = useQuery('parts', () =>
-        fetch(`https://obscure-waters-19361.herokuapp.com/parts/${id}`).then(res =>
+        fetch(`https://uniseq-computer-api.onrender.com/parts/${id}`).then(res =>
             res.json()
         )
 
@@ -43,7 +43,7 @@ const Purchase = () => {
             price: part?.price
         }
 
-        fetch('https://obscure-waters-19361.herokuapp.com/orders', {
+        fetch('https://uniseq-computer-api.onrender.com/orders', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',

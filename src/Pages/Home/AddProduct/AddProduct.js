@@ -30,7 +30,7 @@ const AddProduct = () => {
                         available: data.available,
                         price: data.price,
                     }
-                    fetch('https://obscure-waters-19361.herokuapp.com/parts', {
+                    fetch('https://uniseq-computer-api.onrender.com/parts', {
                         method: 'POST',
                         headers: {
                             'Content-Type': 'application/json',
